@@ -12,17 +12,22 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Zose Agency - Production-Ready Next.js',
-  description:
-    'A staff-level engineered Next.js foundation with zero tech debt, built for 10+ year maintainability.',
+  title: 'Zose Agency',
+  description: 'Platform for agents to manage their businesses',
   keywords: [
-    'Next.js',
-    'React',
-    'TypeScript',
-    'Tailwind CSS',
-    'Production-Ready',
+    'Zose Agency',
+    'Orion Systems & Designs',
+    'Platform',
+    'Agents',
+    'Business',
+    'Management',
   ],
-  authors: [{ name: 'Zose Agency' }],
+  authors: [{ name: 'Orion Systems & Designs' }],
+  icons: {
+    icon: [{ url: '/assets/favicon.png', type: 'image/png' }],
+    shortcut: '/assets/favicon.png',
+    apple: '/assets/favicon.png',
+  },
 };
 
 export const viewport: Viewport = {
