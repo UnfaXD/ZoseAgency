@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export function Header() {
   return (
-    <header className="fixed w-screen bg-background/60 backdrop-blur-sm ">
+    <header className="fixed w-screen bg-background/90 backdrop-blur-sm z-50">
       <div className="container mx-auto flex justify-between items-center p-2">
         <Image
           src="/assets/logo.svg"
