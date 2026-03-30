@@ -59,7 +59,7 @@ export default function TariffSections() {
 
   return (
     <section className="bg-[#F8F9FA] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-      <div className="container mx-auto">
+      <div className="mx-auto max-w-[1280px]">
         <p className="text-sm font-medium text-dark-60">
           Rwanda Zose Applicable MFS Price Structure
         </p>

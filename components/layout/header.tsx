@@ -7,7 +7,7 @@ import Image from 'next/image';
 export function Header() {
   return (
     <header className="fixed w-screen bg-background/90 backdrop-blur-sm z-50">
-      <div className="container mx-auto flex justify-between items-center p-2">
+      <div className="mx-auto max-w-[1280px] flex justify-between items-center p-2">
         <Image
           src="/assets/logo.svg"
           alt="Zose Agency"

@@ -40,7 +40,7 @@ function PlayStoreIcon({ className }: { className?: string }) {
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen container mx-auto px-5 pt-14 sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
+    <section className="mx-auto max-w-[1280px] px-5 pt-14 sm:px-8 sm:pt-24 lg:px-10 lg:pt-52 pb-12 lg:pb-16">
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:items-start lg:gap-8 xl:gap-12 flex-1">
         {/* Left: typographic stack — matches narrow subcopy column in mock */}
         <div className="lg:pt-6">
@@ -100,7 +100,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="mt-12 border-t border-border pt-8 sm:mt-14 sm:pt-9">
+      <div className="mt-8 pt-8 sm:mt-10 sm:pt-10">
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-dark-60 sm:text-xs sm:normal-case sm:tracking-wide">
           We are trusted by leading businesses across different sectors
         </p>
