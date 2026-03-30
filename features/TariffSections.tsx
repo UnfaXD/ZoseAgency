@@ -58,7 +58,10 @@ export default function TariffSections() {
   const rows = tabConfig.find(t => t.id === active)?.rows ?? sendingRows;
 
   return (
-    <section className="bg-[#F8F9FA] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+    <section
+      id="tariffs"
+      className="scroll-mt-24 bg-[#F8F9FA] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+    >
       <div className="mx-auto max-w-[1280px]">
         <p className="text-sm font-medium text-dark-60">
           Rwanda Zose Applicable MFS Price Structure
@@ -105,7 +108,7 @@ export default function TariffSections() {
                     aria-hidden
                   />
                 </span>
-                <span className="pr-0.5">{tab.label}</span>
+                <span className="pr-2">{tab.label}</span>
               </button>
             );
           })}

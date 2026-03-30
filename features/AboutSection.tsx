@@ -32,7 +32,10 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <section className="bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+    <section
+      id="about"
+      className="scroll-mt-24 bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+    >
       <div className="mx-auto max-w-[1280px]">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.45fr)_minmax(0,0.55fr)] lg:items-start lg:gap-14">
           <div>

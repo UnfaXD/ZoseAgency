@@ -61,7 +61,7 @@ const socialLinks = [
 
 export default function FooterSection() {
   return (
-    <footer className="border-t border-dark-10 bg-bg">
+    <footer id="contact" className="scroll-mt-24 border-t border-dark-10 bg-bg">
       <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8 xl:gap-12">
           {columns.map(col => (

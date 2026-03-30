@@ -31,7 +31,10 @@ const features = [
 
 const SolutionSection = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-primary px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24 rounded-t-3xl">
+    <section
+      id="solutions"
+      className="relative w-full scroll-mt-24 overflow-hidden rounded-t-3xl bg-primary px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+    >
       <div className="mx-auto max-w-[1280px]">
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,0.58fr)_minmax(0,0.42fr)] lg:gap-16 xl:gap-20">
           {/* Left Content */}

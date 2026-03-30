@@ -40,7 +40,10 @@ function PlayStoreIcon({ className }: { className?: string }) {
 
 export default function HeroSection() {
   return (
-    <section className="mx-auto max-w-[1280px] px-5 pt-14 sm:px-8 sm:pt-24 lg:px-10 lg:pt-52 pb-12 lg:pb-16">
+    <section
+      id="hero"
+      className="mx-auto max-w-[1280px] scroll-mt-24 px-5 pt-14 pb-12 sm:px-8 sm:pt-24 lg:px-10 lg:pt-52 lg:pb-16"
+    >
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:items-start lg:gap-8 xl:gap-12 flex-1">
         {/* Left: typographic stack — matches narrow subcopy column in mock */}
         <div className="lg:pt-6">
