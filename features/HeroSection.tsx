@@ -40,87 +40,85 @@ function PlayStoreIcon({ className }: { className?: string }) {
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen px-5 pt-14 sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
-      <div className="mx-auto max-w-[1280px]">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:items-start lg:gap-8 xl:gap-12 flex-1">
-          {/* Left: typographic stack — matches narrow subcopy column in mock */}
-          <div className="lg:pt-6">
-            <h1 className="font-display font-bold leading-[1.05] tracking-[-0.02em] text-dark text-[40px] sm:text-[48px] lg:text-[62px] xl:text-[72px]">
-              Financial
-              <br />
-              Happiness,
-              <br />
-              Everywhere
-            </h1>
+    <section className="min-h-screen container mx-auto px-5 pt-14 sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
+      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:items-start lg:gap-8 xl:gap-12 flex-1">
+        {/* Left: typographic stack — matches narrow subcopy column in mock */}
+        <div className="lg:pt-6">
+          <h1 className="font-display font-bold leading-[1.05] tracking-[-0.02em] text-dark text-[40px] sm:text-[48px] lg:text-[62px] xl:text-[72px]">
+            Financial
+            <br />
+            Happiness,
+            <br />
+            Everywhere
+          </h1>
 
-            <p className="mt-6 w-full text-[14px] leading-[1.65] text-dark-60 sm:text-[15px]">
-              Empowering businesses of all sizes with seamless payment solutions
-              tailored for enterprises, startups, and emerging markets.
-            </p>
+          <p className="mt-6 w-full text-[14px] leading-[1.65] text-dark-60 sm:text-[15px]">
+            Empowering businesses of all sizes with seamless payment solutions
+            tailored for enterprises, startups, and emerging markets.
+          </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-4">
-              <span className="shrink-0 text-[11px] font-medium tracking-wide text-dark-60 sm:pb-2.5">
-                Download app on
-              </span>
-              <div className="flex flex-wrap gap-2.5">
-                <a
-                  href="#"
-                  className="inline-flex h-[42px] items-center gap-2.5 rounded-full bg-primary pl-4 pr-1.5 text-xs font-semibold text-white shadow-sm transition hover:opacity-95"
-                >
-                  App Store
-                  <span className="flex size-8 items-center justify-center rounded-full border border-white/25 bg-white/10">
-                    <AppStoreIcon className="size-4 text-white" />
-                  </span>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex h-[42px] items-center gap-2.5 rounded-full bg-secondary pl-4 pr-1.5 text-xs font-semibold text-white shadow-sm transition hover:opacity-95"
-                >
-                  Play Store
-                  <span className="flex size-8 items-center justify-center rounded-full border border-white/25 bg-white/10">
-                    <PlayStoreIcon className="size-4 text-white" />
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: full composition from design asset */}
-          <div className="relative -mx-2 sm:mx-0">
-            <div className="relative mx-auto w-full max-w-[920px]">
-              <Image
-                src="/assets/intro.png"
-                alt="Product preview: devices and dashboard"
-                width={1580}
-                height={1040}
-                priority
-                className="h-auto w-full select-none"
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-4">
+            <span className="shrink-0 text-[11px] font-medium tracking-wide text-dark-60 sm:pb-2.5">
+              Download app on
+            </span>
+            <div className="flex flex-wrap gap-2.5">
+              <a
+                href="#"
+                className="inline-flex h-[42px] items-center gap-2.5 rounded-full bg-primary pl-4 pr-1.5 text-xs font-semibold text-white shadow-sm transition hover:opacity-95"
+              >
+                App Store
+                <span className="flex size-8 items-center justify-center rounded-full border border-white/25 bg-white/10">
+                  <AppStoreIcon className="size-4 text-white" />
+                </span>
+              </a>
+              <a
+                href="#"
+                className="inline-flex h-[42px] items-center gap-2.5 rounded-full bg-secondary pl-4 pr-1.5 text-xs font-semibold text-white shadow-sm transition hover:opacity-95"
+              >
+                Play Store
+                <span className="flex size-8 items-center justify-center rounded-full border border-white/25 bg-white/10">
+                  <PlayStoreIcon className="size-4 text-white" />
+                </span>
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border pt-8 sm:mt-14 sm:pt-9">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-dark-60 sm:text-xs sm:normal-case sm:tracking-wide">
-            We are trusted by leading businesses across different sectors
-          </p>
-          <div className="mt-6 flex flex-wrap justify-between items-center gap-x-6 gap-y-5 sm:gap-x-8 lg:gap-x-10">
-            {partnerLogos.map(logo => (
-              <div
-                key={logo.src}
-                className="flex h-10 items-center justify-center sm:h-11"
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  className="w-auto object-contain opacity-60 grayscale scale-125"
-                />
-              </div>
-            ))}
+        {/* Right: full composition from design asset */}
+        <div className="relative -mx-2 sm:mx-0">
+          <div className="relative mx-auto w-full max-w-[920px]">
+            <Image
+              src="/assets/intro.png"
+              alt="Product preview: devices and dashboard"
+              width={1580}
+              height={1040}
+              priority
+              className="h-auto w-full select-none"
+              sizes="(max-width: 1024px) 100vw, 60vw"
+            />
           </div>
+        </div>
+      </div>
+
+      <div className="mt-12 border-t border-border pt-8 sm:mt-14 sm:pt-9">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-dark-60 sm:text-xs sm:normal-case sm:tracking-wide">
+          We are trusted by leading businesses across different sectors
+        </p>
+        <div className="mt-6 flex flex-wrap justify-between items-center gap-x-6 gap-y-5 sm:gap-x-8 lg:gap-x-10">
+          {partnerLogos.map(logo => (
+            <div
+              key={logo.src}
+              className="flex h-10 items-center justify-center sm:h-11"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                width={logo.width}
+                height={logo.height}
+                className="w-auto object-contain opacity-60 grayscale scale-125"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
