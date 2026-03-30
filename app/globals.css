@@ -2,7 +2,43 @@
 
 /* Design tokens and theme configuration */
 :root {
-  /* Light theme */
+  /* Local font (add files in `public/fonts/`) */
+  /* If the files are missing, the browser will fall back to Poppins. */
+}
+
+@font-face {
+  font-family: 'Millik';
+  src: url('/asses/fonts/Millik.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Millik';
+  src: url('/asses/fonts/Millik.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Millik';
+  src: url('/asses/fonts/Millik.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Millik';
+  src: url('/asses/fonts/Millik.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
   --background: #ffffff;
   --foreground: #171717;
   --muted: #f3f4f6;
@@ -20,41 +56,6 @@
   --accent-foreground: #171717;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-}
-
-[data-theme='dark'] {
-  /* Dark theme */
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
-  --border: #374151;
-  --card: #111827;
-  --card-foreground: #ededed;
-  --popover: #111827;
-  --popover-foreground: #ededed;
-  --primary: #4f46e5;
-  --primary-foreground: #ffffff;
-  --secondary: #f59e0b;
-  --secondary-foreground: #ffffff;
-  --accent: #6366f1;
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --muted: #1f2937;
-    --muted-foreground: #9ca3af;
-    --border: #374151;
-    --card: #111827;
-    --card-foreground: #ededed;
-    --popover: #111827;
-    --popover-foreground: #ededed;
-  }
 }
 
 @theme inline {
@@ -96,8 +97,10 @@
   --color-bg: #f8f8f8;
 
   /* Typography */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    Millik, var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
 
   /* Spacing scale */
   --spacing-xs: 0.5rem;

@@ -18,20 +18,6 @@ export interface AnimationConfig {
   ease?: string;
 }
 
-// Theme types
-export type ThemeMode = 'light' | 'dark' | 'system';
-
-export interface ThemeConfig {
-  mode: ThemeMode;
-  colors: {
-    primary: string;
-    secondary: string;
-    accent: string;
-    background: string;
-    foreground: string;
-  };
-}
-
 // API types
 export interface ApiResponse<T = any> {
   data: T;
