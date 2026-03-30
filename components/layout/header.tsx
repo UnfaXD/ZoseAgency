@@ -6,14 +6,14 @@ import Image from 'next/image';
 
 export function Header() {
   return (
-    <header className="fixed w-screen bg-background border-b border-border">
-      <div className="container mx-auto flex justify-between items-center py-4">
+    <header className="fixed w-screen bg-background/60 backdrop-blur-sm ">
+      <div className="container mx-auto flex justify-between items-center p-2">
         <Image
           src="/assets/logo.svg"
           alt="Zose Agency"
           width={1000}
           height={1000}
-          className="size-32 h-16"
+          className="size-32 h-12"
         />
         <div className="flex items-center gap-4">
           <ul className="flex items-center text-sm rounded-lg">
