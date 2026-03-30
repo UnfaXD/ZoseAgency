@@ -1,64 +1,118 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { Button } from '@/components';
+
+import {
+  AnimatedWrapper,
+  fadeInUp,
+  scaleIn,
+  staggerChildren,
+} from '@/lib/animations';
+import { cn } from '@/lib/utils';
+
+const features = [
+  {
+    title: 'TypeScript Strict Mode',
+    description:
+      'Complete type safety with the strictest TypeScript configuration',
+    icon: '🛡️',
+  },
+  {
+    title: 'Framer Motion',
+    description: 'Production-ready animations with tree-shaking optimization',
+    icon: '✨',
+  },
+  {
+    title: 'Tailwind CSS v4',
+    description:
+      'Modern design system with semantic color tokens and dark mode',
+    icon: '🎨',
+  },
+  {
+    title: 'ESLint & Prettier',
+    description:
+      'Automated code formatting with import sorting and unused import removal',
+    icon: '⚡',
+  },
+  {
+    title: 'Husky & lint-staged',
+    description:
+      'Git hooks for pre-commit validation and pre-push build verification',
+    icon: '🔒',
+  },
+  {
+    title: 'Vitest Testing',
+    description:
+      'Lightning-fast testing with React Testing Library integration',
+    icon: '🧪',
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-background">
+      <main className="container mx-auto px-4 py-16">
+        <AnimatedWrapper className="text-center">
+          <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
+            Production-Ready
+            <span className="text-primary"> Next.js</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
+            A staff-level engineered foundation with zero tech debt, built for
+            10+ year maintainability. Every dependency is justified, every
+            configuration is optimized.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </AnimatedWrapper>
+
+        <AnimatedWrapper
+          variant={scaleIn}
+          delay={0.2}
+          className="mb-16 text-center"
+        >
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg">Get Started</Button>
+            <Button variant="outline" size="lg">
+              View Documentation
+            </Button>
+          </div>
+        </AnimatedWrapper>
+
+        <AnimatedWrapper variant={staggerChildren} delay={0.4}>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {features.map(feature => (
+              <AnimatedWrapper
+                key={feature.title}
+                variant={fadeInUp}
+                className={cn(
+                  'rounded-lg border border-border bg-card p-6 text-card-foreground',
+                  'transition-all hover:shadow-lg hover:shadow-primary/10'
+                )}
+              >
+                <div className="mb-4 text-4xl">{feature.icon}</div>
+                <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </AnimatedWrapper>
+            ))}
+          </div>
+        </AnimatedWrapper>
+
+        <AnimatedWrapper
+          delay={0.8}
+          className="mt-16 rounded-lg bg-muted p-8 text-center"
+        >
+          <h2 className="mb-4 text-2xl font-bold text-foreground">
+            Ready to Build Something Amazing?
+          </h2>
+          <p className="mb-6 text-muted-foreground">
+            This setup includes everything you need for a modern, scalable web
+            application.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button>Start Building</Button>
+            <Button variant="ghost">Run Tests</Button>
+            <Button variant="outline">Analyze Bundle</Button>
+          </div>
+        </AnimatedWrapper>
       </main>
     </div>
   );
